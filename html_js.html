@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #slt {
+            width: 200px;
+            font-size: 20px;
+        }
+        #box {
+            width: 300px;
+            height: 300px;
+            margin: 40px auto;
+            border: 10px solid #eee;
+            box-shadow: 0px 0px 3px 3px grey;
+        }
+    </style>
+</head>
+<body>
+    <select id="slt" onchange="change_color()">
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+        <option value="orange">Orange</option>
+        <option value="purple">Purple</option>
+        <option value="chocolate">Chocolate</option>
+    </select>
+    <div id="box">
+
+    </div>
+
+    <script type='text/javascript'>
+    
+        var slt = document.getElementById('slt');
+        var box = document.getElementById('box');
+
+        function change_color() {
+            box.style.background = slt.value;
+            console.log(slt.value)
+        }
+    </script>
+</body>
+</html>
